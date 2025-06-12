@@ -8,8 +8,8 @@
 // -*- c++ -*-
 
 #include "IndexFlat_c.h"
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexRefine.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexRefine.h>
 #include "macros_impl.h"
 
 extern "C" {

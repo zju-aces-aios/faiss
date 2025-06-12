@@ -7,8 +7,8 @@
 
 #include <faiss/gpu/GpuResources.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
-#include <faiss/impl/AuxIndexStructures.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/AuxIndexStructures.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <faiss/gpu/impl/BroadcastSum.cuh>
 #include <faiss/gpu/impl/Distance.cuh>
 #include <faiss/gpu/impl/DistanceUtils.cuh>

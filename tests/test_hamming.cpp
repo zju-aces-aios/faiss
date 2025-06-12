@@ -7,8 +7,8 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/impl/FaissAssert.h>
-#include <faiss/utils/hamming.h>
+#include <faiss/cpu/impl/FaissAssert.h>
+#include <faiss/cpu/utils/hamming.h>
 #include <random>
 
 using namespace ::testing;

@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "AutoTune_c.h"
-#include <faiss/AutoTune.h>
+#include <faiss/cpu/AutoTune.h>
 #include <cstring>
 #include "macros_impl.h"
 

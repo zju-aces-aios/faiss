@@ -16,7 +16,7 @@
 #include <faiss/gpu/GpuCloner.h>
 #include <faiss/gpu/GpuIndexIVFPQ.h>
 #include <faiss/gpu/StandardGpuResources.h>
-#include <faiss/index_io.h>
+#include <faiss/cpu/index_io.h>
 
 double elapsed() {
     struct timeval tv;

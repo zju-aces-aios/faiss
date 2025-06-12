@@ -13,10 +13,10 @@
 #include <unordered_set>
 #include <vector>
 
-#include <faiss/IndexHNSW.h>
-#include <faiss/impl/HNSW.h>
-#include <faiss/impl/ResultHandler.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/IndexHNSW.h>
+#include <faiss/cpu/impl/HNSW.h>
+#include <faiss/cpu/impl/ResultHandler.h>
+#include <faiss/cpu/utils/random.h>
 
 int reference_pop_min(faiss::HNSW::MinimaxHeap& heap, float* vmin_out) {
     assert(heap.k > 0);

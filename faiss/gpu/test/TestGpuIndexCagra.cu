@@ -21,13 +21,13 @@
  * limitations under the License.
  */
 
-#include <faiss/IndexHNSW.h>
-#include <faiss/MetricType.h>
+#include <faiss/cpu/IndexHNSW.h>
+#include <faiss/cpu/MetricType.h>
 #include <faiss/gpu/GpuIndexCagra.h>
 #include <faiss/gpu/GpuResources.h>
 #include <faiss/gpu/StandardGpuResources.h>
 #include <faiss/gpu/test/TestUtils.h>
-#include <faiss/utils/distances.h>
+#include <faiss/cpu/utils/distances.h>
 #include <cstddef>
 #include <faiss/gpu/utils/CopyUtils.cuh>
 #include <faiss/gpu/utils/DeviceTensor.cuh>

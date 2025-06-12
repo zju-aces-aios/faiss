@@ -16,11 +16,11 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFFlat.h>
-#include <faiss/index_io.h>
-#include <faiss/invlists/OnDiskInvertedLists.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFFlat.h>
+#include <faiss/cpu/index_io.h>
+#include <faiss/cpu/invlists/OnDiskInvertedLists.h>
+#include <faiss/cpu/utils/random.h>
 
 namespace {
 

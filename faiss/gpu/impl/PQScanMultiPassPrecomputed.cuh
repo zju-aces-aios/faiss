@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <faiss/Index.h>
+#include <faiss/cpu/Index.h>
 #include <faiss/gpu/GpuIndicesOptions.h>
 #include <faiss/gpu/utils/DeviceVector.cuh>
 #include <faiss/gpu/utils/NoTypeTensor.cuh>

@@ -7,8 +7,8 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/utils/AlignedTable.h>
-#include <faiss/utils/partitioning.h>
+#include <faiss/cpu/utils/AlignedTable.h>
+#include <faiss/cpu/utils/partitioning.h>
 
 using namespace faiss;
 

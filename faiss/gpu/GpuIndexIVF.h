@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include <faiss/Clustering.h>
-#include <faiss/IndexIVF.h> // for SearchParametersIVF
+#include <faiss/cpu/Clustering.h>
+#include <faiss/cpu/IndexIVF.h> // for SearchParametersIVF
 #include <faiss/gpu/GpuIndex.h>
 #include <faiss/gpu/GpuIndexFlat.h>
 #include <faiss/gpu/GpuIndicesOptions.h>

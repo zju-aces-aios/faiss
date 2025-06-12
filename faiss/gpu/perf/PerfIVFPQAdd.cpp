@@ -6,8 +6,8 @@
  */
 
 #include <cuda_profiler_api.h>
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFPQ.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFPQ.h>
 #include <faiss/gpu/GpuIndexIVFPQ.h>
 #include <faiss/gpu/StandardGpuResources.h>
 #include <faiss/gpu/test/TestUtils.h>

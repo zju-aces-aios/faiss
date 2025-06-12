@@ -14,9 +14,9 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFFlat.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFFlat.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 
 namespace {
 

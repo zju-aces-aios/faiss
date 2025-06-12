@@ -29,7 +29,7 @@
 #include <faiss/gpu/utils/Tensor.cuh>
 #include <optional>
 
-#include <faiss/MetricType.h>
+#include <faiss/cpu/MetricType.h>
 
 #include <cuvs/neighbors/cagra.hpp>
 #include <cuvs/neighbors/ivf_pq.hpp>

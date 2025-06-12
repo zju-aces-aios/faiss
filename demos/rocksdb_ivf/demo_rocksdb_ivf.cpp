@@ -13,11 +13,11 @@
 
 #include "RocksDBInvertedLists.h"
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFFlat.h>
-#include <faiss/impl/AuxIndexStructures.h>
-#include <faiss/impl/FaissException.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFFlat.h>
+#include <faiss/cpu/impl/AuxIndexStructures.h>
+#include <faiss/cpu/impl/FaissException.h>
+#include <faiss/cpu/utils/random.h>
 
 using namespace faiss;
 

@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/IndexAdditiveQuantizer.h>
-#include <faiss/IndexScalarQuantizer.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/IndexAdditiveQuantizer.h>
+#include <faiss/cpu/IndexScalarQuantizer.h>
+#include <faiss/cpu/utils/random.h>
 #include <gtest/gtest.h>
 
 /* This test creates a 3-level RCQ and performs a search on it.

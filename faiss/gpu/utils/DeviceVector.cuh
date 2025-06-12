@@ -11,7 +11,7 @@
 #include <faiss/gpu/GpuResources.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
 #include <faiss/gpu/utils/StaticUtils.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <thrust/execution_policy.h>
 #include <thrust/fill.h>
 #include <algorithm>

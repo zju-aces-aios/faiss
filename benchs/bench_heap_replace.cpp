@@ -7,10 +7,10 @@
 
 #include <cstdio>
 
-#include <faiss/impl/FaissAssert.h>
-#include <faiss/utils/Heap.h>
-#include <faiss/utils/random.h>
-#include <faiss/utils/utils.h>
+#include <faiss/cpu/impl/FaissAssert.h>
+#include <faiss/cpu/utils/Heap.h>
+#include <faiss/cpu/utils/random.h>
+#include <faiss/cpu/utils/utils.h>
 
 using namespace faiss;
 

@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "distances_c.h"
-#include <faiss/utils/distances.h>
+#include <faiss/cpu/utils/distances.h>
 #include <cstdio>
 
 void faiss_pairwise_L2sqr(

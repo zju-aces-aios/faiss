@@ -11,14 +11,14 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/AutoTune.h>
-#include <faiss/IVFlib.h>
-#include <faiss/IndexIVFFlat.h>
-#include <faiss/clone_index.h>
-#include <faiss/impl/io.h>
-#include <faiss/index_factory.h>
-#include <faiss/index_io.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/AutoTune.h>
+#include <faiss/cpu/IVFlib.h>
+#include <faiss/cpu/IndexIVFFlat.h>
+#include <faiss/cpu/clone_index.h>
+#include <faiss/cpu/impl/io.h>
+#include <faiss/cpu/index_factory.h>
+#include <faiss/cpu/index_io.h>
+#include <faiss/cpu/utils/random.h>
 
 namespace {
 

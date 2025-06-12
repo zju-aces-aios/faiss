@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include <faiss/invlists/InvertedLists.h>
+#include <faiss/cpu/invlists/InvertedLists.h>
 
 #include <rocksdb/db.h>
 

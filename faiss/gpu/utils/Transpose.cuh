@@ -10,7 +10,7 @@
 #include <cuda.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
 #include <faiss/gpu/utils/StaticUtils.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <stdint.h>
 #include <faiss/gpu/utils/Tensor.cuh>
 

@@ -7,9 +7,9 @@
 
 #pragma once
 
-#include <faiss/Index.h>
-#include <faiss/impl/FaissAssert.h>
-#include <faiss/invlists/InvertedLists.h>
+#include <faiss/cpu/Index.h>
+#include <faiss/cpu/impl/FaissAssert.h>
+#include <faiss/cpu/invlists/InvertedLists.h>
 #include <gtest/gtest.h>
 #include <cstring>
 #include <initializer_list>

@@ -12,7 +12,7 @@
 #ifndef MACROS_IMPL_H
 #define MACROS_IMPL_H
 
-#include <faiss/impl/FaissException.h>
+#include <faiss/cpu/impl/FaissException.h>
 #include <iostream>
 #include <stdexcept>
 #include "error_impl.h"

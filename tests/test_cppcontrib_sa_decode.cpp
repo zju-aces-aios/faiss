@@ -12,16 +12,16 @@
 #include <tuple>
 #include <vector>
 
-#include <faiss/Index.h>
-#include <faiss/Index2Layer.h>
-#include <faiss/IndexIVFPQ.h>
-#include <faiss/IndexPQ.h>
-#include <faiss/impl/io.h>
-#include <faiss/index_factory.h>
-#include <faiss/index_io.h>
+#include <faiss/cpu/Index.h>
+#include <faiss/cpu/Index2Layer.h>
+#include <faiss/cpu/IndexIVFPQ.h>
+#include <faiss/cpu/IndexPQ.h>
+#include <faiss/cpu/impl/io.h>
+#include <faiss/cpu/index_factory.h>
+#include <faiss/cpu/index_io.h>
 
-#include <faiss/IndexRowwiseMinMax.h>
-#include <faiss/cppcontrib/SaDecodeKernels.h>
+#include <faiss/cpu/IndexRowwiseMinMax.h>
+#include <faiss/cpu/cppcontrib/SaDecodeKernels.h>
 
 using namespace ::testing;
 using ::testing::TestWithParam;

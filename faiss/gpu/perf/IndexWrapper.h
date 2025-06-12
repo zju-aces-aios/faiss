@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <faiss/IndexReplicas.h>
+#include <faiss/cpu/IndexReplicas.h>
 #include <faiss/gpu/StandardGpuResources.h>
 #include <functional>
 #include <memory>

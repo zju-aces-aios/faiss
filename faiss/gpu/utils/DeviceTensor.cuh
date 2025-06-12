@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <faiss/Index.h> // idx_t
+#include <faiss/cpu/Index.h> // idx_t
 #include <faiss/gpu/GpuResources.h>
 #include <faiss/gpu/utils/Tensor.cuh>
 

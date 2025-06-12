@@ -7,8 +7,8 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/Index.h>
-#include <faiss/utils/utils.h>
+#include <faiss/cpu/Index.h>
+#include <faiss/cpu/utils/utils.h>
 
 TEST(TestUtils, get_version) {
     std::string version = std::to_string(FAISS_VERSION_MAJOR) + "." +

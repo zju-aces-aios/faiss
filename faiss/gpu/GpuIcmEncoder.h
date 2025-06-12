@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <faiss/impl/LocalSearchQuantizer.h>
+#include <faiss/cpu/impl/LocalSearchQuantizer.h>
 
 #include <memory>
 

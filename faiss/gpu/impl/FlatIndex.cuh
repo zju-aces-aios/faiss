@@ -23,7 +23,7 @@
 
 #pragma once
 
-#include <faiss/MetricType.h>
+#include <faiss/cpu/MetricType.h>
 #include <faiss/gpu/GpuResources.h>
 #include <faiss/gpu/utils/DeviceTensor.cuh>
 #include <faiss/gpu/utils/DeviceVector.cuh>

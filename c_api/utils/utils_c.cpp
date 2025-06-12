@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "utils_c.h"
-#include <faiss/Index.h>
+#include <faiss/cpu/Index.h>
 
 const char* faiss_get_version() {
     return VERSION_STRING;

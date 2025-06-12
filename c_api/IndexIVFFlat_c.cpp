@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "IndexIVFFlat_c.h"
-#include <faiss/IndexIVFFlat.h>
+#include <faiss/cpu/IndexIVFFlat.h>
 #include "Clustering_c.h"
 #include "Index_c.h"
 #include "macros_impl.h"

@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <faiss/MetricType.h>
+#include <faiss/cpu/MetricType.h>
 #include <faiss/gpu/utils/DeviceTensor.cuh>
 #include <faiss/gpu/utils/Float16.cuh>
 

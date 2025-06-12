@@ -6,7 +6,7 @@
  */
 
 #include "IndexShards_c.h"
-#include <faiss/IndexShards.h>
+#include <faiss/cpu/IndexShards.h>
 #include "macros_impl.h"
 
 using faiss::Index;

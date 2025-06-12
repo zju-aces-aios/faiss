@@ -23,7 +23,7 @@
 
 #pragma once
 
-#include <faiss/Index.h>
+#include <faiss/cpu/Index.h>
 #include <faiss/gpu/GpuResources.h>
 
 namespace faiss {

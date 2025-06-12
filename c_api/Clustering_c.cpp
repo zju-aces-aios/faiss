@@ -8,8 +8,8 @@
 // -*- c++ -*-
 
 #include "Clustering_c.h"
-#include <faiss/Clustering.h>
-#include <faiss/Index.h>
+#include <faiss/cpu/Clustering.h>
+#include <faiss/cpu/Index.h>
 #include <vector>
 #include "macros_impl.h"
 

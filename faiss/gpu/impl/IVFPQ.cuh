@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include <faiss/Index.h>
-#include <faiss/MetricType.h>
+#include <faiss/cpu/Index.h>
+#include <faiss/cpu/MetricType.h>
 #include <faiss/gpu/impl/IVFBase.cuh>
 #include <faiss/gpu/utils/Float16.cuh>
 

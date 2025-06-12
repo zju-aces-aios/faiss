@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "IndexBinary_c.h"
-#include <faiss/IndexBinary.h>
+#include <faiss/cpu/IndexBinary.h>
 #include "macros_impl.h"
 
 extern "C" {

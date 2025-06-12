@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "GpuAutoTune_c.h"
-#include <faiss/Index.h>
+#include <faiss/cpu/Index.h>
 #include <faiss/gpu/GpuAutoTune.h>
 #include <faiss/gpu/GpuCloner.h>
 #include <faiss/gpu/GpuClonerOptions.h>

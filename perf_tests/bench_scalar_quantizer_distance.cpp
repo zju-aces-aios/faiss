@@ -11,9 +11,9 @@
 #include <map>
 
 #include <benchmark/benchmark.h>
-#include <faiss/impl/ScalarQuantizer.h>
+#include <faiss/cpu/impl/ScalarQuantizer.h>
 #include <faiss/perf_tests/utils.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/utils/random.h>
 
 using namespace faiss;
 DEFINE_uint32(d, 128, "dimension");

@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include <faiss/AutoTune.h>
-#include <faiss/Index.h>
+#include <faiss/cpu/AutoTune.h>
+#include <faiss/cpu/Index.h>
 
 namespace faiss {
 namespace gpu {

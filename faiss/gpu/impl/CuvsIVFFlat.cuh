@@ -23,7 +23,7 @@
 
 #pragma once
 
-#include <faiss/impl/CodePacker.h>
+#include <faiss/cpu/impl/CodePacker.h>
 #include <faiss/gpu/impl/GpuScalarQuantizer.cuh>
 #include <faiss/gpu/impl/IVFFlat.cuh>
 

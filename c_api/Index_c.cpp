@@ -8,8 +8,8 @@
 // -*- c++ -*-
 
 #include "Index_c.h"
-#include <faiss/Index.h>
-#include <faiss/impl/IDSelector.h>
+#include <faiss/cpu/Index.h>
+#include <faiss/cpu/impl/IDSelector.h>
 #include "macros_impl.h"
 
 extern "C" {

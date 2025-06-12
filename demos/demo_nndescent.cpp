@@ -10,8 +10,8 @@
 #include <cstdlib>
 #include <random>
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexNNDescent.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexNNDescent.h>
 
 using namespace std::chrono;
 

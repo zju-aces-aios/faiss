@@ -7,7 +7,7 @@
 
 #include <faiss/gpu/utils/DeviceUtils.h>
 #include <faiss/gpu/utils/StaticUtils.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #ifdef USE_AMD_ROCM
 #define CUDART_NAN_F __int_as_float(0x7fffffff)
 #else

@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/IndexIVFFlat.h>
-#include <faiss/index_io.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/IndexIVFFlat.h>
+#include <faiss/cpu/index_io.h>
+#include <faiss/cpu/utils/random.h>
 
 #include <faiss/gpu/GpuIndexIVFFlat.h>
 #include <faiss/gpu/perf/IndexWrapper.h>

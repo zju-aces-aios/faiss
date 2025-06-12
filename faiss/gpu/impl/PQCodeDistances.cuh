@@ -8,7 +8,7 @@
 #pragma once
 
 #include <cublas_v2.h>
-#include <faiss/Index.h>
+#include <faiss/cpu/Index.h>
 #include <faiss/gpu/utils/NoTypeTensor.cuh>
 #include <faiss/gpu/utils/Tensor.cuh>
 

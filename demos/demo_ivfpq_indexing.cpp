@@ -12,9 +12,9 @@
 
 #include <sys/time.h>
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFPQ.h>
-#include <faiss/index_io.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFPQ.h>
+#include <faiss/cpu/index_io.h>
 
 double elapsed() {
     struct timeval tv;

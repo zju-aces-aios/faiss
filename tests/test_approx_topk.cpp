@@ -15,10 +15,10 @@
 #include <unordered_set>
 #include <vector>
 
-#include <faiss/utils/approx_topk/approx_topk.h>
+#include <faiss/cpu/utils/approx_topk/approx_topk.h>
 
-#include <faiss/impl/FaissException.h>
-#include <faiss/utils/Heap.h>
+#include <faiss/cpu/impl/FaissException.h>
+#include <faiss/cpu/utils/Heap.h>
 
 //
 using namespace faiss;

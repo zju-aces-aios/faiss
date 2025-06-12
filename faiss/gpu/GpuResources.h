@@ -25,7 +25,7 @@
 
 #include <cublas_v2.h>
 #include <cuda_runtime.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 
 #include <memory>
 #include <utility>

@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/IndexReplicas.h>
-#include <faiss/IndexShards.h>
-#include <faiss/impl/ThreadedIndex.h>
+#include <faiss/cpu/IndexReplicas.h>
+#include <faiss/cpu/IndexShards.h>
+#include <faiss/cpu/impl/ThreadedIndex.h>
 
 #include <gtest/gtest.h>
 #include <chrono>

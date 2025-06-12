@@ -9,10 +9,10 @@
 #include <cstdio>
 
 #include <benchmark/benchmark.h>
-#include <faiss/impl/ScalarQuantizer.h>
-#include <faiss/utils/distances.h>
-#include <faiss/utils/random.h>
-#include <faiss/utils/utils.h>
+#include <faiss/cpu/impl/ScalarQuantizer.h>
+#include <faiss/cpu/utils/distances.h>
+#include <faiss/cpu/utils/random.h>
+#include <faiss/cpu/utils/utils.h>
 
 using namespace faiss;
 

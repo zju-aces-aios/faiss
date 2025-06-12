@@ -21,7 +21,7 @@
  * limitations under the License.
  */
 
-#include <faiss/IndexHNSW.h>
+#include <faiss/cpu/IndexHNSW.h>
 #include <faiss/gpu/GpuIndexCagra.h>
 #include <faiss/gpu/StandardGpuResources.h>
 #include <cstddef>

@@ -11,12 +11,12 @@
 #include <memory>
 #include <vector>
 
-#include <faiss/IndexIVF.h>
-#include <faiss/clone_index.h>
-#include <faiss/impl/FaissAssert.h>
-#include <faiss/index_factory.h>
-#include <faiss/invlists/InvertedLists.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/IndexIVF.h>
+#include <faiss/cpu/clone_index.h>
+#include <faiss/cpu/impl/FaissAssert.h>
+#include <faiss/cpu/index_factory.h>
+#include <faiss/cpu/invlists/InvertedLists.h>
+#include <faiss/cpu/utils/random.h>
 
 /* This demonstrates how to query several independent IVF indexes with a trained
  *index in common. This avoids to duplicate the coarse quantizer and metadata

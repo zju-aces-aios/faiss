@@ -9,7 +9,7 @@
 #include <cstdlib>
 #include <random>
 
-#include <faiss/IndexFlat.h>
+#include <faiss/cpu/IndexFlat.h>
 #include <faiss/gpu/GpuAutoTune.h>
 #include <faiss/gpu/GpuCloner.h>
 #include <faiss/gpu/GpuIndexFlat.h>

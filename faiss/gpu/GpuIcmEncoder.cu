@@ -8,7 +8,7 @@
 #include <faiss/gpu/GpuIcmEncoder.h>
 
 #include <faiss/gpu/StandardGpuResources.h>
-#include <faiss/utils/WorkerThread.h>
+#include <faiss/cpu/utils/WorkerThread.h>
 #include <faiss/gpu/impl/IcmEncoder.cuh>
 
 #include <algorithm>

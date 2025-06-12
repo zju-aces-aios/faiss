@@ -8,8 +8,8 @@
 #include <gflags/gflags.h>
 
 #include <benchmark/benchmark.h>
-#include <faiss/IndexAdditiveQuantizer.h> // @manual=//faiss:faiss_no_multithreading
-#include <faiss/utils/random.h> // @manual=//faiss:faiss_no_multithreading
+#include <faiss/cpu/IndexAdditiveQuantizer.h> // @manual=//faiss:faiss_no_multithreading
+#include <faiss/cpu/utils/random.h> // @manual=//faiss:faiss_no_multithreading
 
 using namespace faiss;
 DEFINE_uint32(iterations, 20, "iterations");

@@ -6,7 +6,7 @@
  */
 
 #include "IndexReplicas_c.h"
-#include <faiss/IndexReplicas.h>
+#include <faiss/cpu/IndexReplicas.h>
 #include "macros_impl.h"
 
 using faiss::Index;

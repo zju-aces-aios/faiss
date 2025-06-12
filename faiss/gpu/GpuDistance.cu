@@ -24,8 +24,8 @@
 #include <faiss/gpu/GpuDistance.h>
 #include <faiss/gpu/GpuResources.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
-#include <faiss/impl/FaissAssert.h>
-#include <faiss/utils/Heap.h>
+#include <faiss/cpu/impl/FaissAssert.h>
+#include <faiss/cpu/utils/Heap.h>
 #include <faiss/gpu/impl/Distance.cuh>
 #include <faiss/gpu/utils/ConversionOperators.cuh>
 #include <faiss/gpu/utils/CopyUtils.cuh>
@@ -35,7 +35,7 @@
 
 #if defined USE_NVIDIA_CUVS
 #include <cuvs/neighbors/brute_force.hpp>
-#include <faiss/gpu/utils/CuvsUtils.h>
+#include <faiss/cpu/utils/CuvsUtils.h>
 #include <raft/core/device_mdspan.hpp>
 #include <raft/core/device_resources.hpp>
 #include <raft/core/error.hpp>

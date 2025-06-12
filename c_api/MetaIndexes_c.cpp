@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "MetaIndexes_c.h"
-#include <faiss/MetaIndexes.h>
+#include <faiss/cpu/MetaIndexes.h>
 #include "macros_impl.h"
 
 using faiss::Index;

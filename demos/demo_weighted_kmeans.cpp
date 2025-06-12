@@ -9,11 +9,11 @@
 #include <cstdlib>
 #include <memory>
 
-#include <faiss/Clustering.h>
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexHNSW.h>
-#include <faiss/utils/distances.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/Clustering.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexHNSW.h>
+#include <faiss/cpu/utils/distances.h>
+#include <faiss/cpu/utils/random.h>
 
 namespace {
 

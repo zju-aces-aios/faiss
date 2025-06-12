@@ -21,7 +21,7 @@
  * limitations under the License.
  */
 
-#include <faiss/IndexFlat.h>
+#include <faiss/cpu/IndexFlat.h>
 #include <faiss/gpu/GpuDistance.h>
 #include <faiss/gpu/StandardGpuResources.h>
 #include <faiss/gpu/test/TestUtils.h>

@@ -10,9 +10,9 @@
 #include <cstdlib>
 #include <random>
 
-#include <faiss/IndexPQFastScan.h>
-#include <faiss/IndexRefine.h>
-#include <faiss/index_factory.h>
+#include <faiss/cpu/IndexPQFastScan.h>
+#include <faiss/cpu/IndexRefine.h>
+#include <faiss/cpu/index_factory.h>
 using idx_t = faiss::idx_t;
 
 int main() {

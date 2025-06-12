@@ -14,10 +14,10 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/IVFlib.h>
-#include <faiss/IndexIVF.h>
-#include <faiss/VectorTransform.h>
-#include <faiss/index_factory.h>
+#include <faiss/cpu/IVFlib.h>
+#include <faiss/cpu/IndexIVF.h>
+#include <faiss/cpu/VectorTransform.h>
+#include <faiss/cpu/index_factory.h>
 
 namespace {
 

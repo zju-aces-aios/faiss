@@ -9,10 +9,10 @@
 
 #include <vector>
 
-#include <faiss/Clustering.h>
-#include <faiss/Index.h>
-#include <faiss/IndexBinary.h>
-#include <faiss/clone_index.h>
+#include <faiss/cpu/Clustering.h>
+#include <faiss/cpu/Index.h>
+#include <faiss/cpu/IndexBinary.h>
+#include <faiss/cpu/clone_index.h>
 #include <faiss/gpu/GpuClonerOptions.h>
 #include <faiss/gpu/GpuIndex.h>
 #include <faiss/gpu/GpuIndicesOptions.h>

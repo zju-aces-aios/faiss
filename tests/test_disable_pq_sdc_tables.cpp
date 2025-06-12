@@ -9,10 +9,10 @@
 
 #include <random>
 
-#include "faiss/Index.h"
-#include "faiss/IndexHNSW.h"
-#include "faiss/index_factory.h"
-#include "faiss/index_io.h"
+#include "faiss/cpu/Index.h"
+#include "faiss/cpu/IndexHNSW.h"
+#include "faiss/cpu/index_factory.h"
+#include "faiss/cpu/index_io.h"
 #include "test_util.h"
 
 pthread_mutex_t temp_file_mutex = PTHREAD_MUTEX_INITIALIZER;

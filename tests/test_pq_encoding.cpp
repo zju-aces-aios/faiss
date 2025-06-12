@@ -11,9 +11,9 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/IndexPQFastScan.h>
-#include <faiss/impl/ProductQuantizer.h>
-#include <faiss/impl/pq4_fast_scan.h>
+#include <faiss/cpu/IndexPQFastScan.h>
+#include <faiss/cpu/impl/ProductQuantizer.h>
+#include <faiss/cpu/impl/pq4_fast_scan.h>
 
 namespace {
 

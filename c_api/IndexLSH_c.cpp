@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "IndexLSH_c.h"
-#include <faiss/IndexLSH.h>
+#include <faiss/cpu/IndexLSH.h>
 #include "macros_impl.h"
 
 using faiss::Index;

@@ -5,16 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFFlat.h>
-#include <faiss/IndexIVFPQ.h>
-#include <faiss/IndexScalarQuantizer.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFFlat.h>
+#include <faiss/cpu/IndexIVFPQ.h>
+#include <faiss/cpu/IndexScalarQuantizer.h>
 #include <faiss/gpu/GpuIndex.h>
 #include <faiss/gpu/GpuResources.h>
 #include <faiss/gpu/impl/IndexUtils.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
 #include <faiss/gpu/utils/StaticUtils.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <faiss/gpu/utils/CopyUtils.cuh>
 
 #include <algorithm>

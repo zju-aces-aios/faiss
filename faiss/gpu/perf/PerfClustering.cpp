@@ -5,19 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/Clustering.h>
+#include <faiss/cpu/Clustering.h>
 #include <faiss/gpu/GpuIndexFlat.h>
 #include <faiss/gpu/StandardGpuResources.h>
 #include <faiss/gpu/perf/IndexWrapper.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
 #include <faiss/gpu/utils/Timer.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/utils/random.h>
 #include <gflags/gflags.h>
 #include <memory>
 #include <vector>
 
 #include <cuda_profiler_api.h>
-#include <faiss/impl/AuxIndexStructures.h>
+#include <faiss/cpu/impl/AuxIndexStructures.h>
 
 DEFINE_int32(num, 10000, "# of vecs");
 DEFINE_int32(k, 100, "# of clusters");

@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <faiss/IndexScalarQuantizer.h>
+#include <faiss/cpu/IndexScalarQuantizer.h>
 #include <faiss/gpu/utils/ConversionOperators.cuh>
 #include <faiss/gpu/utils/DeviceTensor.cuh>
 #include <faiss/gpu/utils/HostTensor.cuh>

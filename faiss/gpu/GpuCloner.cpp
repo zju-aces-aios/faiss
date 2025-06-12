@@ -6,25 +6,25 @@
  */
 
 #include <faiss/gpu/GpuCloner.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <memory>
 #include <typeinfo>
 
 #include <faiss/gpu/StandardGpuResources.h>
 
-#include <faiss/IndexBinaryFlat.h>
-#include <faiss/IndexFlat.h>
+#include <faiss/cpu/IndexBinaryFlat.h>
+#include <faiss/cpu/IndexFlat.h>
 #if defined USE_NVIDIA_CUVS
-#include <faiss/IndexHNSW.h>
+#include <faiss/cpu/IndexHNSW.h>
 #endif
-#include <faiss/IndexIVF.h>
-#include <faiss/IndexIVFFlat.h>
-#include <faiss/IndexIVFPQ.h>
-#include <faiss/IndexPreTransform.h>
-#include <faiss/IndexReplicas.h>
-#include <faiss/IndexScalarQuantizer.h>
-#include <faiss/IndexShardsIVF.h>
-#include <faiss/MetaIndexes.h>
+#include <faiss/cpu/IndexIVF.h>
+#include <faiss/cpu/IndexIVFFlat.h>
+#include <faiss/cpu/IndexIVFPQ.h>
+#include <faiss/cpu/IndexPreTransform.h>
+#include <faiss/cpu/IndexReplicas.h>
+#include <faiss/cpu/IndexScalarQuantizer.h>
+#include <faiss/cpu/IndexShardsIVF.h>
+#include <faiss/cpu/MetaIndexes.h>
 #include <faiss/gpu/GpuIndex.h>
 #include <faiss/gpu/GpuIndexBinaryFlat.h>
 #if defined USE_NVIDIA_CUVS
@@ -35,8 +35,8 @@
 #include <faiss/gpu/GpuIndexIVFPQ.h>
 #include <faiss/gpu/GpuIndexIVFScalarQuantizer.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
-#include <faiss/impl/FaissAssert.h>
-#include <faiss/index_io.h>
+#include <faiss/cpu/impl/FaissAssert.h>
+#include <faiss/cpu/index_io.h>
 
 namespace faiss {
 namespace gpu {

@@ -10,10 +10,10 @@
 
 #include <cinttypes>
 
-#include <faiss/impl/FaissAssert.h>
-#include <faiss/utils/hamming.h>
-#include <faiss/utils/random.h>
-#include <faiss/utils/utils.h>
+#include <faiss/cpu/impl/FaissAssert.h>
+#include <faiss/cpu/utils/hamming.h>
+#include <faiss/cpu/utils/random.h>
+#include <faiss/cpu/utils/utils.h>
 
 using namespace faiss;
 

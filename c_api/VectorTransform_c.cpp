@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "VectorTransform_c.h"
-#include <faiss/VectorTransform.h>
+#include <faiss/cpu/VectorTransform.h>
 #include "macros_impl.h"
 
 extern "C" {

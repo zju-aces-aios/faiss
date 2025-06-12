@@ -10,8 +10,8 @@
 #include <cstdlib>
 #include <random>
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFFlat.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFFlat.h>
 
 using idx_t = faiss::idx_t;
 

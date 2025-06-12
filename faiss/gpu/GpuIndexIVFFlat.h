@@ -8,7 +8,7 @@
 #pragma once
 
 #include <faiss/gpu/GpuIndexIVF.h>
-#include <faiss/impl/ScalarQuantizer.h>
+#include <faiss/cpu/impl/ScalarQuantizer.h>
 
 #include <memory>
 

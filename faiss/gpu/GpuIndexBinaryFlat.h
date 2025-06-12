@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <faiss/IndexBinaryFlat.h>
+#include <faiss/cpu/IndexBinaryFlat.h>
 #include <faiss/gpu/GpuIndex.h>
 #include <faiss/gpu/GpuResources.h>
 #include <memory>

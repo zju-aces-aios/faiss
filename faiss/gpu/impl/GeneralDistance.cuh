@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/MetricType.h>
+#include <faiss/cpu/MetricType.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
-#include <faiss/impl/AuxIndexStructures.h>
+#include <faiss/cpu/impl/AuxIndexStructures.h>
 #include <faiss/gpu/impl/DistanceUtils.cuh>
 #include <faiss/gpu/utils/BlockSelectKernel.cuh>
 #include <faiss/gpu/utils/ConversionOperators.cuh>

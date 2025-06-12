@@ -8,10 +8,10 @@
 #include <faiss/gpu/GpuAutoTune.h>
 #include <typeinfo>
 
-#include <faiss/IndexPreTransform.h>
-#include <faiss/IndexReplicas.h>
-#include <faiss/IndexShards.h>
-#include <faiss/IndexShardsIVF.h>
+#include <faiss/cpu/IndexPreTransform.h>
+#include <faiss/cpu/IndexReplicas.h>
+#include <faiss/cpu/IndexShards.h>
+#include <faiss/cpu/IndexShardsIVF.h>
 
 #include <faiss/gpu/GpuIndex.h>
 #include <faiss/gpu/GpuIndexFlat.h>

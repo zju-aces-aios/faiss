@@ -87,7 +87,7 @@ if(FAISS_ENABLE_CUVS AND NOT TARGET cuvs::cuvs)
    find_package(cuvs)
  endif()
 
-add_subdirectory(faiss)
+add_subdirectory(faiss/cpu)
 
 if(FAISS_ENABLE_GPU)
   if(FAISS_ENABLE_ROCM)

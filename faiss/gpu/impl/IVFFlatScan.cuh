@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include <faiss/Index.h>
-#include <faiss/MetricType.h>
+#include <faiss/cpu/Index.h>
+#include <faiss/cpu/MetricType.h>
 #include <faiss/gpu/GpuIndicesOptions.h>
 #include <faiss/gpu/impl/GpuScalarQuantizer.cuh>
 #include <faiss/gpu/utils/DeviceVector.cuh>

@@ -8,9 +8,9 @@
 // -*- c++ -*-
 
 #include "AuxIndexStructures_c.h"
-#include <faiss/impl/AuxIndexStructures.h>
-#include <faiss/impl/DistanceComputer.h>
-#include <faiss/impl/IDSelector.h>
+#include <faiss/cpu/impl/AuxIndexStructures.h>
+#include <faiss/cpu/impl/DistanceComputer.h>
+#include <faiss/cpu/impl/IDSelector.h>
 #include <iostream>
 #include "../macros_impl.h"
 

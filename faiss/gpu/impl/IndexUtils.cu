@@ -6,7 +6,7 @@
  */
 
 #include <faiss/gpu/impl/IndexUtils.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <faiss/gpu/utils/DeviceDefs.cuh>
 #include <limits>
 

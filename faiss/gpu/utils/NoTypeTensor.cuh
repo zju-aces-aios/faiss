@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include <faiss/Index.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/Index.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <faiss/gpu/utils/Tensor.cuh>
 #include <initializer_list>
 

@@ -15,9 +15,9 @@
 #include <memory>
 #include <random>
 
-#include <faiss/utils/hamming.h>
+#include <faiss/cpu/utils/hamming.h>
 
-#include <faiss/cppcontrib/detail/UintReader.h>
+#include <faiss/cpu/cppcontrib/detail/UintReader.h>
 
 template <intptr_t N_ELEMENTS, intptr_t CODE_BITS, intptr_t CPOS>
 struct TestLoop {

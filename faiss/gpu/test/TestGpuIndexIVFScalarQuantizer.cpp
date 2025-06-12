@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexScalarQuantizer.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexScalarQuantizer.h>
 #include <faiss/gpu/GpuIndexIVFScalarQuantizer.h>
 #include <faiss/gpu/StandardGpuResources.h>
 #include <faiss/gpu/test/TestUtils.h>

@@ -6,7 +6,7 @@
  */
 
 #pragma once
-#include <faiss/impl/ScalarQuantizer.h>
+#include <faiss/cpu/impl/ScalarQuantizer.h>
 #include <map>
 
 namespace faiss::perf_tests {

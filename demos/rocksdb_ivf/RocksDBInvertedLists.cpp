@@ -7,7 +7,7 @@
 
 #include "RocksDBInvertedLists.h"
 
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 
 using namespace faiss;
 

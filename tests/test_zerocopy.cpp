@@ -12,11 +12,11 @@
 #include <random>
 #include <vector>
 
-#include <faiss/IndexBinaryFlat.h>
-#include <faiss/IndexFlat.h>
-#include <faiss/impl/io.h>
-#include <faiss/impl/zerocopy_io.h>
-#include <faiss/index_io.h>
+#include <faiss/cpu/IndexBinaryFlat.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/impl/io.h>
+#include <faiss/cpu/impl/zerocopy_io.h>
+#include <faiss/cpu/index_io.h>
 
 namespace {
 

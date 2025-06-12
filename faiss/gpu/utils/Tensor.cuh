@@ -10,7 +10,7 @@
 #include <assert.h>
 #include <cuda.h>
 #include <cuda_runtime.h>
-#include <faiss/Index.h> // idx_t
+#include <faiss/cpu/Index.h> // idx_t
 #include <stdint.h>
 #include <initializer_list>
 #include <vector>

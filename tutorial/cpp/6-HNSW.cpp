@@ -10,7 +10,7 @@
 #include <cstdlib>
 #include <random>
 
-#include <faiss/IndexHNSW.h>
+#include <faiss/cpu/IndexHNSW.h>
 
 using idx_t = faiss::idx_t;
 

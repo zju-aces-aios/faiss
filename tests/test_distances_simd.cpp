@@ -12,7 +12,7 @@
 #include <random>
 #include <vector>
 
-#include <faiss/utils/distances.h>
+#include <faiss/cpu/utils/distances.h>
 
 // reference implementations
 void fvec_inner_products_ny_ref(

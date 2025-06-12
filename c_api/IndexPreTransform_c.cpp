@@ -8,8 +8,8 @@
 // -*- c++ -*-
 
 #include "IndexPreTransform_c.h"
-#include <faiss/IndexPreTransform.h>
-#include <faiss/VectorTransform.h>
+#include <faiss/cpu/IndexPreTransform.h>
+#include <faiss/cpu/VectorTransform.h>
 #include "macros_impl.h"
 
 using faiss::Index;

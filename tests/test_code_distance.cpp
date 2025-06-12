@@ -19,9 +19,9 @@
 #include <tuple>
 #include <vector>
 
-#include <faiss/impl/FaissAssert.h>
-#include <faiss/impl/ProductQuantizer.h>
-#include <faiss/impl/code_distance/code_distance.h>
+#include <faiss/cpu/impl/FaissAssert.h>
+#include <faiss/cpu/impl/ProductQuantizer.h>
+#include <faiss/cpu/impl/code_distance/code_distance.h>
 
 size_t nMismatches(
         const std::vector<float>& ref,

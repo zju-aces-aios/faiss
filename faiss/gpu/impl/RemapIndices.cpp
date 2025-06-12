@@ -6,7 +6,7 @@
  */
 
 #include <faiss/gpu/impl/RemapIndices.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 
 namespace faiss {
 namespace gpu {

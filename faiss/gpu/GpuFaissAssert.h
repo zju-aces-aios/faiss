@@ -9,7 +9,7 @@
 #define GPU_FAISS_ASSERT_INCLUDED
 
 #include <cuda.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 
 ///
 /// Assertions

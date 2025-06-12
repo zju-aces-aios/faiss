@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/utils/Heap.h>
+#include <faiss/cpu/utils/Heap.h>
 #include <gtest/gtest.h>
 #include <algorithm>
 #include <numeric>

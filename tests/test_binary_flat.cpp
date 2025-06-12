@@ -10,8 +10,8 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/IndexBinaryFlat.h>
-#include <faiss/utils/hamming.h>
+#include <faiss/cpu/IndexBinaryFlat.h>
+#include <faiss/cpu/utils/hamming.h>
 
 TEST(BinaryFlat, accuracy) {
     // dimension of the vectors to index

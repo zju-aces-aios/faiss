@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "IndexIVF_c.h"
-#include <faiss/IndexIVF.h>
+#include <faiss/cpu/IndexIVF.h>
 #include "Clustering_c.h"
 #include "Index_c.h"
 #include "impl/AuxIndexStructures_c.h"

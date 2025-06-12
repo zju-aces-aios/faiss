@@ -9,7 +9,7 @@
 
 #include <cuda.h>
 #include <faiss/gpu/utils/StaticUtils.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <faiss/gpu/utils/DeviceDefs.cuh>
 #include <faiss/gpu/utils/MergeNetworkUtils.cuh>
 #include <faiss/gpu/utils/PtxUtils.cuh>

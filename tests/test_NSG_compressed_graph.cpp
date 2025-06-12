@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/IndexNSG.h>
-#include <faiss/utils/hamming.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/IndexNSG.h>
+#include <faiss/cpu/utils/hamming.h>
+#include <faiss/cpu/utils/random.h>
 #include <gtest/gtest.h>
 
 using namespace faiss;

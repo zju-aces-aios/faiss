@@ -9,13 +9,13 @@
 #include <unistd.h>
 #include <memory>
 
-#include <faiss/IVFlib.h>
-#include <faiss/IndexIVF.h>
-#include <faiss/impl/IDSelector.h>
-#include <faiss/index_factory.h>
-#include <faiss/index_io.h>
-#include <faiss/utils/random.h>
-#include <faiss/utils/utils.h>
+#include <faiss/cpu/IVFlib.h>
+#include <faiss/cpu/IndexIVF.h>
+#include <faiss/cpu/impl/IDSelector.h>
+#include <faiss/cpu/index_factory.h>
+#include <faiss/cpu/index_io.h>
+#include <faiss/cpu/utils/random.h>
+#include <faiss/cpu/utils/utils.h>
 
 /************************
  * This benchmark attempts to measure the runtime overhead to use an IDSelector

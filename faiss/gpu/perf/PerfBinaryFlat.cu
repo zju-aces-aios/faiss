@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/IndexBinaryFlat.h>
+#include <faiss/cpu/IndexBinaryFlat.h>
 #include <faiss/gpu/GpuIndexBinaryFlat.h>
 #include <faiss/gpu/StandardGpuResources.h>
 #include <faiss/gpu/test/TestUtils.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
 #include <faiss/gpu/utils/Timer.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/utils/random.h>
 #include <gflags/gflags.h>
 #include <faiss/gpu/utils/DeviceTensor.cuh>
 #include <faiss/gpu/utils/HostTensor.cuh>

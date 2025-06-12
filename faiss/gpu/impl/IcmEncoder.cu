@@ -8,7 +8,7 @@
 #include <faiss/gpu/impl/IcmEncoder.cuh>
 
 #include <faiss/gpu/GpuResources.h>
-#include <faiss/impl/FaissAssert.h>
+#include <faiss/cpu/impl/FaissAssert.h>
 #include <faiss/gpu/impl/L2Norm.cuh>
 #include <faiss/gpu/utils/CopyUtils.cuh>
 #include <faiss/gpu/utils/DeviceDefs.cuh>

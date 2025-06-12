@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFFlat.h>
-#include <faiss/IndexIVFPQ.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFFlat.h>
+#include <faiss/cpu/IndexIVFPQ.h>
 #include <faiss/gpu/test/TestUtils.h>
-#include <faiss/index_io.h>
+#include <faiss/cpu/index_io.h>
 #include <gflags/gflags.h>
 #include <vector>
 

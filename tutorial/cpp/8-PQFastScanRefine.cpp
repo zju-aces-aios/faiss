@@ -10,8 +10,8 @@
 #include <cstdlib>
 #include <random>
 
-#include <faiss/IndexPQFastScan.h>
-#include <faiss/IndexRefine.h>
+#include <faiss/cpu/IndexPQFastScan.h>
+#include <faiss/cpu/IndexRefine.h>
 
 using idx_t = faiss::idx_t;
 

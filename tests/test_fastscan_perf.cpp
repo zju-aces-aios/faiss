@@ -15,9 +15,9 @@
 
 #include <omp.h>
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFPQFastScan.h>
-#include <faiss/impl/AuxIndexStructures.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFPQFastScan.h>
+#include <faiss/cpu/impl/AuxIndexStructures.h>
 
 TEST(TestFastScan, knnVSrange) {
     // small vectors and database

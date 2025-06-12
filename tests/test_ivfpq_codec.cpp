@@ -13,9 +13,9 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFPQ.h>
-#include <faiss/utils/distances.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFPQ.h>
+#include <faiss/cpu/utils/distances.h>
 
 namespace {
 

@@ -6,7 +6,7 @@
  */
 
 #include <faiss/gpu/test/TestUtils.h>
-#include <faiss/utils/random.h>
+#include <faiss/cpu/utils/random.h>
 #include <gtest/gtest.h>
 #include <time.h>
 #include <cmath>

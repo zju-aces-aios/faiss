@@ -10,7 +10,7 @@
 #include <faiss/gpu/GpuResources.h>
 #include <faiss/gpu/impl/RemapIndices.h>
 #include <faiss/gpu/utils/DeviceUtils.h>
-#include <faiss/invlists/InvertedLists.h>
+#include <faiss/cpu/invlists/InvertedLists.h>
 #include <thrust/host_vector.h>
 #include <faiss/gpu/impl/FlatIndex.cuh>
 #include <faiss/gpu/impl/IVFAppend.cuh>

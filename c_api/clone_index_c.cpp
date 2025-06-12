@@ -9,7 +9,7 @@
 // I/O code for indexes
 
 #include "clone_index_c.h"
-#include <faiss/clone_index.h>
+#include <faiss/cpu/clone_index.h>
 #include "macros_impl.h"
 
 using faiss::Index;

@@ -8,7 +8,7 @@
 #ifndef FAISS_TEST_UTIL_H
 #define FAISS_TEST_UTIL_H
 
-#include <faiss/IndexIVFPQ.h>
+#include <faiss/cpu/IndexIVFPQ.h>
 #include <unistd.h>
 
 struct Tempfilename {

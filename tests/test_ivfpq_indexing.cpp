@@ -11,8 +11,8 @@
 
 #include <gtest/gtest.h>
 
-#include <faiss/IndexFlat.h>
-#include <faiss/IndexIVFPQ.h>
+#include <faiss/cpu/IndexFlat.h>
+#include <faiss/cpu/IndexIVFPQ.h>
 
 TEST(IVFPQ, accuracy) {
     // dimension of the vectors to index

@@ -9,7 +9,7 @@
 #include <cstdlib>
 #include <random>
 
-#include <faiss/IndexFlat.h>
+#include <faiss/cpu/IndexFlat.h>
 
 // 64-bit int
 using idx_t = faiss::idx_t;

@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "error_impl.h"
-#include <faiss/impl/FaissException.h>
+#include <faiss/cpu/impl/FaissException.h>
 #include <exception>
 #include "error_c.h"
 

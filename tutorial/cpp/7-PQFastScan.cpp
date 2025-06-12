@@ -10,7 +10,7 @@
 #include <cstdlib>
 #include <random>
 
-#include <faiss/IndexPQFastScan.h>
+#include <faiss/cpu/IndexPQFastScan.h>
 
 using idx_t = faiss::idx_t;
 

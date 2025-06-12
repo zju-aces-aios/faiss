@@ -8,7 +8,7 @@
 // -*- c++ -*-
 
 #include "index_factory_c.h"
-#include <faiss/index_factory.h>
+#include <faiss/cpu/index_factory.h>
 #include <cstring>
 #include "macros_impl.h"
 

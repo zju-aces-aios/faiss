@@ -8,8 +8,8 @@
 // -*- c++ -*-
 
 #include "IndexScalarQuantizer_c.h"
-#include <faiss/IndexScalarQuantizer.h>
-#include <faiss/impl/ScalarQuantizer.h>
+#include <faiss/cpu/IndexScalarQuantizer.h>
+#include <faiss/cpu/impl/ScalarQuantizer.h>
 #include "macros_impl.h"
 
 using faiss::Index;
