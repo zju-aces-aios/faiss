@@ -61,13 +61,13 @@ class FlatIndex {
     Tensor<half, 2, true>& getVectorsFloat16Ref();
 
     virtual void query(
-            Tensor<float, 2, true>& vecs,
-            int k,
-            faiss::MetricType metric,
-            float metricArg,
-            Tensor<float, 2, true>& outDistances,
-            Tensor<idx_t, 2, true>& outIndices,
-            bool exactDistance);
+            Tensor<float, 2, true>& vecs,      // 查询的向量
+            int k,                             // 数量
+            faiss::MetricType metric,           // 距离计算方法
+            float metricArg,            // 距离计算方法的参数   
+            Tensor<float, 2, true>& outDistances,       // 输出的距离
+            Tensor<idx_t, 2, true>& outIndices,         // 输出的索引
+            bool exactDistance);                        
 
     virtual void query(
             Tensor<half, 2, true>& vecs,

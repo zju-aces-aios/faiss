@@ -20,6 +20,7 @@
 # =============================================================================
 
 cmake_minimum_required(VERSION 3.24.0 FATAL_ERROR)
+include(FetchContent)
 
 set(FAISS_LANGUAGES CXX)
 
@@ -59,7 +60,7 @@ list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 
 # Valid values are "generic", "avx2", "avx512", "avx512_spr", "sve".
 option(FAISS_OPT_LEVEL "" "generic")
-option(FAISS_ENABLE_GPU "Enable support for GPU indexes." ON)
+option(FAISS_ENABLE_GPU "Enable support for GPU indexes." OFF)
 option(FAISS_ENABLE_CUVS "Enable cuVS for GPU indexes." OFF)
 option(FAISS_ENABLE_ROCM "Enable ROCm for GPU indexes." OFF)
 option(FAISS_ENABLE_MKL "Enable MKL." ON)
@@ -67,6 +68,8 @@ option(FAISS_ENABLE_PYTHON "Build Python extension." ON)
 option(FAISS_ENABLE_C_API "Build C API." OFF)
 option(FAISS_ENABLE_EXTRAS "Build extras like benchmarks and demos" ON)
 option(FAISS_USE_LTO "Enable Link-Time optimization" OFF)
+option(FAISS_ENABLE_HEXAGON "Enable support for Hexagon indexes using Kompute." ON)
+
 
 if(FAISS_ENABLE_GPU)
   if(FAISS_ENABLE_ROCM)
@@ -83,9 +86,38 @@ if(FAISS_ENABLE_GPU)
   endif()
 endif()
 
+# 添加Kompute依赖管理
+if(FAISS_ENABLE_HEXAGON)
+  message(STATUS "Enabling Hexagon support with Kompute")
+  
+  # 使用FetchContent自动获取Kompute
+  FetchContent_Declare(
+    kompute
+    GIT_REPOSITORY https://github.com/KomputeProject/Kompute.git
+    GIT_TAG        v0.9.0  # 指定稳定版本
+    GIT_SHALLOW    TRUE    # 浅克隆以节省时间
+  )
+  
+  # 设置Kompute编译选项
+  set(KOMPUTE_OPT_BUILD_TESTS OFF CACHE BOOL "Build Kompute tests")
+  set(KOMPUTE_OPT_BUILD_DOCS OFF CACHE BOOL "Build Kompute documentation")
+  set(KOMPUTE_OPT_BUILD_EXAMPLES OFF CACHE BOOL "Build Kompute examples")
+  set(KOMPUTE_OPT_BUILD_SINGLE_HEADER OFF CACHE BOOL "Build single header")
+  
+  # 获取并构建Kompute
+  FetchContent_MakeAvailable(kompute)
+  
+  # 检查是否成功获取
+  if(NOT TARGET kompute)
+    message(FATAL_ERROR "Failed to fetch and build Kompute")
+  endif()
+  
+  message(STATUS "Kompute successfully integrated")
+endif()
+
 if(FAISS_ENABLE_CUVS AND NOT TARGET cuvs::cuvs)
    find_package(cuvs)
- endif()
+endif()
 
 add_subdirectory(faiss/cpu)
 
@@ -95,6 +127,11 @@ if(FAISS_ENABLE_GPU)
   else()
     add_subdirectory(faiss/gpu)
   endif()
+endif()
+
+# 添加hexagon子目录
+if(FAISS_ENABLE_HEXAGON)
+  add_subdirectory(faiss/hexagon)
 endif()
 
 if(FAISS_ENABLE_PYTHON)
@@ -124,3 +161,6 @@ if(BUILD_TESTING)
     endif()
   endif()
 endif()
+
+
+# cmake ..     -DFAISS_ENABLE_GPU=OFF -DFAISS_ENABLE_HEXAGON=ON    -DFAISS_ENABLE_PYTHON=OFF     -DBUILD_TESTING=ON     -DCMAKE_BUILD_TYPE=Release
