@@ -14,8 +14,8 @@ namespace hexagon{
         std::shared_ptr<kp::TensorT<uint>>  outIndices,         // 输出索引id
         bool ignoreOutDistance = false ) 
     {
-        // 通过GPU计算L2距离
-        
+        // TODO
+        return;
 
 
 

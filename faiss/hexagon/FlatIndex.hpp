@@ -30,7 +30,7 @@ namespace hexagon {
                 float metricArg,
                 std::shared_ptr<kp::tensorT<float>> outDistance,
                 std::shared_ptr<kp::tensorT<idx_t>> outIndices,
-                bool exactDistance = false
+                bool exactDistance = false      // 
             );
 
             // query 16版本
@@ -42,13 +42,13 @@ namespace hexagon {
 
             void reconstruct(
                 std::vector<idx_t> ids,
-                std::shared_ptr<kp::tensorT<float>> vecs
+                float* vecs
             );
 
             void reconstruct(
                 idx_t start,
                 idx_t num,
-                std::shared_ptr<kp::tensorT<idx_t>> vecs
+                float* vecs
             );
 
             void add(

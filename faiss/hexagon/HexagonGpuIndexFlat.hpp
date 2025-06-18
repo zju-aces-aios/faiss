@@ -1,7 +1,7 @@
 #pragma once
 
 #include <faiss/cpu/Index.h>
-
+#include <faiss/hexagon/FlatIndex.hpp>
 // Kompute头文件
 #include <kompute/Kompute.hpp>
 
@@ -14,23 +14,34 @@ struct HexagonGpuIndexConfig {
 
 class HexagonGpuIndex : public faiss::Index {
     public:
-        HexagonGpuIndex(
-            std::shared_ptr<kompute::Manager> kmg,
+        HexagonGpuIndex(        // √
+            std::shared_ptr<kp::Manager> mgr,
             int dims,
             faiss::MetricType metric,
-            float metricArg,
-            HexagonGpuIndexConfig config = HexagonGpuIndexConfig()
-        )
+            float metricArg
+        );
 
-        std::shared_ptr<Kompute::Manager> getKomputeManager();
+        std::shared_ptr<Kompute::Manager> getKomputeManager();  // √
 
-        void add(idx_t n, const float* x) override;
+        size_t getNumVecs() const;  // √
 
-        void add_with_ids(idx_t n, const float* x, const idx_t* ids) override;
+        void reset(uint dim);  // √
+
+        void train(idx_t n, const float* x);  // √
+
+        void reconstruct(idx_t key, float* out) const;  // √
+
+        void reconstruct_n(idx_t i0, idx_t num, float* out) const;  // √
+
+        void reconstruct_batch(idx_t n, const idx_t* keys, float* out) const;  // √
+
+        void add(idx_t n, const float* x);  // √
+
+        void add_with_ids(idx_t n, const float* x, const idx_t* ids = nullptr);  // √
 
         void assign(idx_t n, const float* x, idx_t* labels, idx_t k = 1) const override;
 
-        void search(
+        void search(    // √
                 idx_t n,
                 const float* x,
                 idx_t k,
@@ -49,10 +60,9 @@ class HexagonGpuIndex : public faiss::Index {
                 float* recons,
                 const SearchParameters* params = nullptr) const override;
 
-        void compute_residual(const float* x, float* residual, idx_t key)
-        const override;
+        void compute_residual(const float* x, float* residual, idx_t key) const override;  // √
 
-        void compute_residual_n(
+        void compute_residual_n(  // √
                 idx_t n,
                 const float* xs,
                 float* residuals,
@@ -60,18 +70,21 @@ class HexagonGpuIndex : public faiss::Index {
 
     protected:
 
-        virtual void addImpl_(idx_t n, const float* x, const idx_t* ids) = 0;
+        virtual void addImpl_(idx_t n, const float* x, const idx_t* ids = nullptr);  // √
 
-        virtual void searchImpl_(
+        virtual void searchImpl_(       // √
                 idx_t n,
                 const float* x,
                 int k,
                 float* distances,
                 idx_t* labels,
-                const SearchParameters* params) const = 0;
+                const SearchParameters* params);
         
-        std::shared_ptr<kompute::Manager> kmg_;
+        virtual void resetIndex_(uint dim);     // √
+
+        std::shared_ptr<kp::Manager> mgr_;
         const HexagonGpuIndexConfig config_;
+        std::shared_ptr<hexagon::FlatIndex> data_;
         // size_t minPagedSize_;
 }
 

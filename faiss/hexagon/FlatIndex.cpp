@@ -1,6 +1,7 @@
 #include <faiss/hexagon/FlatIndex.hpp>
 #include <faiss/hexagon/computeResidual.hpp>
 
+#include <memory>
 #include <math.h>
 namespace faiss {
 namespace hexagon{
@@ -60,16 +61,13 @@ void FlatIndex::computeResidual(
 
 void FlatIndex::reconstruct(
     std::vector<idx_t> ids,
-    std::shared_ptr<kp::tensorT<float>> vecs) {
+    float* vecs) {
     // 根据id返回对应的向量
-    // TODO: 两种实现办法，一种全部在CPU完成，一种在GPU完成，但是会在CPU和GPU传输数据
     if (!this->useFloat16_) {
-        std::vector<float>* tmp = vecs->data<float>();
-        int j = 0;
-        for (auto id : ids) {
-            for (int i = 0; i < this->dim_; ++i) {
-                vecs->data<float>()[j++] = this->data32_->data<vector>()[id * dim_ + i];
-            }
+        for (int i = 0; i < ids.size(); ++i) {
+            memcpy( vecs + i * this->dim_ * sizeof(float), 
+                    this->data32_->data() + ids[i] * this->dim_ * sizeof(float), 
+                    this->dim_ * sizeof(float));
         }
     }
     else {
@@ -81,17 +79,12 @@ void FlatIndex::reconstruct(
 void FlatIndex::reconstruct(
     idx_t start,
     idx_t num,
-    std::shared_ptr<kp::tensorT<idx_t>> vecs) {
-    // 从start开始返回num个vec
-    if (start + num - 1 > this->num_ || 
-        vecs->data<float>().size() < num * sozeof(float)) {
-        return;
-    }
-
+    float* vecs) {
+    // 把一段连续的数据恢复到vecs中    
     if (!this->useFloat16_) {
-        for (int i = 0; i <= num * dim_; ++i) {
-            vecs->data<float>()[i] = this->data32_->data<float>()[start * dim_ + i];
-        }
+        memcpy( vecs, 
+                this->data32_->data() + start * this->dim_ * sizeof(float), 
+                num * this->dim_ * sizeof(float));
     }
     else {
         return;
