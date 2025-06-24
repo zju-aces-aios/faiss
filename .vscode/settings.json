@@ -73,6 +73,7 @@
         "complex": "cpp",
         "forward_list": "cpp",
         "typeindex": "cpp",
-        "expected": "cpp"
+        "expected": "cpp",
+        "shared_mutex": "cpp"
     }
 }

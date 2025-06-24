@@ -134,9 +134,10 @@ if(FAISS_ENABLE_HEXAGON)
   add_subdirectory(faiss/hexagon)
 endif()
 
-if(FAISS_ENABLE_PYTHON)
-  add_subdirectory(faiss/python)
-endif()
+# python接口还未进行适配修改
+# if(FAISS_ENABLE_PYTHON)
+#   add_subdirectory(faiss/cpu/python)
+# endif()
 
 if(FAISS_ENABLE_C_API)
   add_subdirectory(c_api)

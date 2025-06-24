@@ -10,9 +10,9 @@ FlatIndex::FlatIndex(kp::Manager* mgr, int dim, bool useFloat16 = false) {
     this->mgr_ = mgr;
     this->dim_ = dim;
     this->useFloat16_ = useFloat16;
-    this->data32_ = this->mgr_.tensorT<float>(std::vector<float>{});
-    this->data16_ = this->mgr_.tensorT<float>(std::vector<float>{});
-    this->capacity = 0;
+    this->data32_ = std::vector<float>();
+    this->data16_ = std::vector<float>();
+    this->capacity_ = 0;
     this->num_ = 0;
 }
 
@@ -22,9 +22,9 @@ bool FlatIndex::getUseFloat16() const {
 
 idx_t FlatIndex::getSize() const {
     if (!this->useFloat16_)
-        return this->data32_->data<float>().size() / this->dim_;
+        return this->data32_.size() / this->dim_;
     else
-        return this->data16_->data<float>().size() / this->dim_ * 2;
+        return this->data16_.size() / this->dim_;
 }
 
 int FlatIndex::getDim() const {
@@ -32,41 +32,37 @@ int FlatIndex::getDim() const {
 }
 
 void FlatIndex::reserve(size_t numVecs) {
-    // 暂存原数据后重新rebuild
-    std::vector<float> tmp = this->data32_->data<float>();
-    for (int i = numVecs * this->dim_ - tmp.size(); i > 0; i--) {
-        tmp.push_back(0.0);
-    }
-    this->data32_->rebuild(tmp.data(), numVecs * this->dim_, numVecs * this->dim_ * sizeof(float));
-    this->capacity = numVecs;
+    // 预留空间
+    this->data32_.reserve(numVecs * dim_);
 }
 
 kp::Tensor& FlatIndex::getVectorFloat32Ref() {
-    return this->data32_;
+    // TODO
+    return;
 }
 
-kp::Tensor& FlatIndex::getVectorFloat16Ref() {
-    return this->data16_;
+kp::Tensor& FlatIndex::getVectorsFloat16Ref() {
+    // TODO
+    return;
 }
 
 void FlatIndex::computeResidual(
-    std::shared_ptr<kp::tensorT<float>> vecs,
-    std::shared_ptr<kp::tensorT<idx_t>> ids,
-    std::shared_ptr<kp::tensorT<float>> residuals) {
-    
-    // 调用外部函数完成计算过程
-    faiss::hexagon::calResidual(mgr_, dim_, vecs, ids, this->data32_, residuals);
+    const float* vecs,
+    const idx_t* ids,
+    float* residuals) {
+    // 计算残差，在次数把需要的张量拼接好，并把指针传递给对应的函数
 
 }
 
-void FlatIndex::reconstruct(
-    std::vector<idx_t> ids,
-    float* vecs) {
+void FlatIndex::reconstruct(std::vector<idx_t> ids, float* vecs) {
     // 根据id返回对应的向量
     if (!this->useFloat16_) {
         for (int i = 0; i < ids.size(); ++i) {
+            // 检查是否越界
+            if (ids[i] < 0 || ids[i] >= data32_.size() / dim_)
+                continue;
             memcpy( vecs + i * this->dim_ * sizeof(float), 
-                    this->data32_->data() + ids[i] * this->dim_ * sizeof(float), 
+                    this->data32_.data() + ids[i] * this->dim_ * sizeof(float),
                     this->dim_ * sizeof(float));
         }
     }
@@ -83,7 +79,7 @@ void FlatIndex::reconstruct(
     // 把一段连续的数据恢复到vecs中    
     if (!this->useFloat16_) {
         memcpy( vecs, 
-                this->data32_->data() + start * this->dim_ * sizeof(float), 
+                this->data32_.data() + start * this->dim_ * sizeof(float), 
                 num * this->dim_ * sizeof(float));
     }
     else {
@@ -100,22 +96,18 @@ void FlatIndex::add(const float* data, idx_t numVecs) {
         // 需要扩容，扩容策略选择二倍
         while (num_ + numVecs > capacity_)
             capacity_ *= 2;
-        std::vector<float> tmp = this->data32_->data<float>();
-        this->data32_->rebuild(tmp, num_ * sizeof(float), capacity_ * sizeof(float));
+        this->data32_.resize(capacity_ * dim_);
+        this->norm_.reserve(capacity_ * dim_);
     }
 
     // 添加
-    for (int i = 0; i < numVecs; ++i) {
-        for (int j = 0; j < dim_; j++){
-            this->data32_->data<float>()[num_ * dim_ + j] = data[i * dim_ + j]
-        }
-        num_++;
+    memcpy(this->data32_.data() + num_ * dim_, data, numVecs * dim_ * sizeof(float));
+    // 预计算对应数据的平方并储存
+    for (int i = 0; i < numVecs * dim_; ++i) {
+        norm_[(num_ - 1) * dim_ + i] = data[i] * data[i];
     }
 
-    // 预计算对应数据的平方并储存
-    for (int i = 0; i < numVecs; ++i) {
-        norm_.push_back(data[i] * data[i]);
-    }
+    num_ += numVecs;
 }
 
 

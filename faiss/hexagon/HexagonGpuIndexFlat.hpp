@@ -10,7 +10,7 @@ namespace hexagon {
 
 struct HexagonGpuIndexConfig {
     int dump = 1145;         // 占位，与原代码结构保持一致
-}
+};
 
 class HexagonGpuIndex : public faiss::Index {
     public:
@@ -21,25 +21,25 @@ class HexagonGpuIndex : public faiss::Index {
             float metricArg
         );
 
-        std::shared_ptr<Kompute::Manager> getKomputeManager();  // √
+        std::shared_ptr<kp::Manager> getKomputeManager();  // √
 
-        size_t getNumVecs() const;  // √
+        size_t getNumVecs();  // √
 
         void reset(uint dim);  // √
 
         void train(idx_t n, const float* x);  // √
 
-        void reconstruct(idx_t key, float* out) const;  // √
+        void reconstruct(idx_t key, float* out);  // √
 
-        void reconstruct_n(idx_t i0, idx_t num, float* out) const;  // √
+        void reconstruct_n(idx_t i0, idx_t num, float* out);  // √
 
-        void reconstruct_batch(idx_t n, const idx_t* keys, float* out) const;  // √
+        void reconstruct_batch(idx_t n, const idx_t* keys, float* out);  // √
 
         void add(idx_t n, const float* x);  // √
 
         void add_with_ids(idx_t n, const float* x, const idx_t* ids = nullptr);  // √
 
-        void assign(idx_t n, const float* x, idx_t* labels, idx_t k = 1) const override;
+        void assign(idx_t n, const float* x, idx_t* labels, idx_t k = 1);
 
         void search(    // √
                 idx_t n,
@@ -47,7 +47,7 @@ class HexagonGpuIndex : public faiss::Index {
                 idx_t k,
                 float* distances,
                 idx_t* labels,
-                const SearchParameters* params = nullptr) const override;
+                const SearchParameters* params = nullptr);
 
         /// `x`, `distances` and `labels` and `recons` can be resident on the CPU or
         /// any GPU; copies are performed as needed
@@ -58,15 +58,15 @@ class HexagonGpuIndex : public faiss::Index {
                 float* distances,
                 idx_t* labels,
                 float* recons,
-                const SearchParameters* params = nullptr) const override;
+                const SearchParameters* params = nullptr);
 
-        void compute_residual(const float* x, float* residual, idx_t key) const override;  // √
+        void compute_residual(const float* x, float* residual, idx_t key);  // √
 
         void compute_residual_n(  // √
                 idx_t n,
                 const float* xs,
                 float* residuals,
-                const idx_t* keys) const override;
+                const idx_t* keys);
 
     protected:
 
@@ -86,7 +86,7 @@ class HexagonGpuIndex : public faiss::Index {
         const HexagonGpuIndexConfig config_;
         std::shared_ptr<hexagon::FlatIndex> data_;
         // size_t minPagedSize_;
-}
+};
 
 }
 }
